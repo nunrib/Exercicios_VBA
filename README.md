@@ -12,3 +12,5 @@ Lista de exercícios:
 04 | Crie uma planilha de preenchimento por caixas de diálogos.
 
 05 | Peça para o usuário informar seu peso e altura e informe seu IMC na tela. Para calcular o IMC use a fórmula: IMC = massa/(altura^2)
+
+06| Crie um vetor com 3 elementos. Peça para o usuário informar cada um dos nomes em uma inputbox e atribua esses nomes aos elementos do vetor. Na sequência exiba em uma mensagem os três nomes, um de cada vez.
