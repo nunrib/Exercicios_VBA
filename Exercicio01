@@ -65,6 +65,9 @@ For i = 2 To ultimalinha 'percorre da linha 2 até a última
     If Planilha1.Cells(i, 2) <> "" And Planilha1.Cells(i, 2) <> 0 Then 'verifica divisão por zero
      Planilha1.Cells(i, 4) = CLng(informacao(i, 1)) / informacao(i, 2)
     End If
+    If Planilha1.Cells(i, 2) = "" Or Planilha1.Cells(i, 2) = 0 Then
+        Planilha1.Cells(i, 4) = "Divisão por zero"
+    End If
 Next
 
 End Sub
