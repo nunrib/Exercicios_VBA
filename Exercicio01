@@ -1,0 +1,95 @@
+Private Sub CommandButton1_Click()
+ultimalinha = Planilha1.Cells(Rows.Count, "a").End(xlUp).Row 'percorre todas as linhas até achar a última que contenha informação
+Dim informacao() As Integer 'vai criar uma matriz dinâmica auxiliar chamada informacao
+Planilha1.Cells(1, 1) = "Dados 1" 'cabeçalho
+Planilha1.Cells(1, 2) = "Dados 2" 'cabeçalho
+Planilha1.Cells(1, 4) = "Resultado" 'cabeçalho
+
+
+For i = 2 To ultimalinha 'percorre da linha 2 até a última
+    ReDim informacao(i, 2) 'define o tamanho da matriz a ser usada
+    If Planilha1.Cells(i, 1) <> "" Then 'ignora células vazias
+            informacao(i, 1) = Planilha1.Cells(i, 1) 'preenche a matriz auxiliar com as informações
+    End If
+        
+    If Planilha1.Cells(i, 2) <> "" Then
+            informacao(i, 2) = Planilha1.Cells(i, 2) 'preenche a segunda coluna da matriz auxiliar com informações
+    End If
+    
+    Planilha1.Cells(i, 4) = CLng(informacao(i, 1)) + informacao(i, 2) 'faz a soma e coloca na coluna resultado
+Next
+
+End Sub
+
+Private Sub CommandButton2_Click()
+ultimalinha = Planilha1.Cells(Rows.Count, "a").End(xlUp).Row 'percorre todas as linhas até achar a última que contenha informação
+Dim informacao() As Integer 'vai criar uma matriz dinâmica auxiliar chamada informacao
+Planilha1.Cells(1, 1) = "Dados 1" 'cabeçalho
+Planilha1.Cells(1, 2) = "Dados 2" 'cabeçalho
+Planilha1.Cells(1, 4) = "Resultado" 'cabeçalho
+
+
+For i = 2 To ultimalinha 'percorre da linha 2 até a última
+    ReDim informacao(i, 2) 'define o tamanho da matriz a ser usada
+    If Planilha1.Cells(i, 1) <> "" Then 'ignora células vazias
+            informacao(i, 1) = Planilha1.Cells(i, 1) 'preenche a matriz auxiliar com as informações
+    End If
+        
+    If Planilha1.Cells(i, 2) <> "" Then
+            informacao(i, 2) = Planilha1.Cells(i, 2) 'preenche a segunda coluna da matriz auxiliar com informações
+    End If
+    
+    Planilha1.Cells(i, 4) = CLng(informacao(i, 1)) - informacao(i, 2) 'faz a subtração e coloca na coluna resultado
+Next
+
+End Sub
+
+Private Sub CommandButton3_Click()
+ultimalinha = Planilha1.Cells(Rows.Count, "a").End(xlUp).Row 'percorre todas as linhas até achar a última que contenha informação
+Dim informacao() As Integer 'vai criar uma matriz dinâmica auxiliar chamada informacao
+Planilha1.Cells(1, 1) = "Dados 1" 'cabeçalho
+Planilha1.Cells(1, 2) = "Dados 2" 'cabeçalho
+Planilha1.Cells(1, 4) = "Resultado" 'cabeçalho
+
+
+For i = 2 To ultimalinha 'percorre da linha 2 até a última
+    ReDim informacao(i, 2) 'define o tamanho da matriz a ser usada
+    If Planilha1.Cells(i, 1) <> "" Then 'ignora células vazias
+            informacao(i, 1) = Planilha1.Cells(i, 1) 'preenche a matriz auxiliar com as informações
+    End If
+        
+    If Planilha1.Cells(i, 2) <> "" Then
+            informacao(i, 2) = Planilha1.Cells(i, 2) 'preenche a segunda coluna da matriz auxiliar com informações
+    End If
+    
+    If Planilha1.Cells(i, 2) <> "" And Planilha1.Cells(i, 2) <> 0 Then 'verifica divisão por zero
+     Planilha1.Cells(i, 4) = CLng(informacao(i, 1)) / informacao(i, 2)
+    End If
+Next
+
+End Sub
+
+Private Sub CommandButton4_Click()
+
+ultimalinha = Planilha1.Cells(Rows.Count, "a").End(xlUp).Row 'percorre todas as linhas até achar a última que contenha informação
+Dim informacao() As Integer 'vai criar uma matriz dinâmica auxiliar chamada informacao
+Planilha1.Cells(1, 1) = "Dados 1" 'cabeçalho
+Planilha1.Cells(1, 2) = "Dados 2" 'cabeçalho
+Planilha1.Cells(1, 4) = "Resultado" 'cabeçalho
+
+
+For i = 2 To ultimalinha 'percorre da linha 2 até a última
+    ReDim informacao(i, 2) 'define o tamanho da matriz a ser usada
+    If Planilha1.Cells(i, 1) <> "" Then 'ignora células vazias
+            informacao(i, 1) = Planilha1.Cells(i, 1) 'preenche a matriz auxiliar com as informações
+    End If
+        
+    If Planilha1.Cells(i, 2) <> "" Then
+            informacao(i, 2) = Planilha1.Cells(i, 2) 'preenche a segunda coluna da matriz auxiliar com informações
+    End If
+    
+    Planilha1.Cells(i, 4) = CLng(informacao(i, 1)) * informacao(i, 2)
+Next
+
+
+End Sub
