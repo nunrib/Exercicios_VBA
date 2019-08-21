@@ -1,0 +1,74 @@
+Private Sub CommandButton1_Click()
+
+ultimalinha = Planilha1.Cells(Rows.Count, "A").End(xlUp).Row
+
+
+Dim nome As String
+Dim data As Date
+Dim op As String
+Dim sexo As String
+Dim pai As String
+Dim mae As String
+Dim estado As String
+Dim cidade As String
+Dim rua As String
+Dim cep As String
+Dim bairro As String
+
+
+
+nome = InputBox("Digite seu nome", "Nome", "João da Silva Júnior")
+data = InputBox("Digite sua data de nascimento", "data de nascimento", "1/12/1969")
+op = InputBox("Digite seu CPF", "CPF", "000000000-00")
+pai = InputBox("Digite o nome do seu pai", "Pai", "João da Silva")
+mae = InputBox("Digite o nome da sua mãe", "Mãe", "Maria da Silva")
+estado = InputBox("Digite seu estado", "Estado", "Rio de Janeiro")
+cidade = InputBox("Digite sua cidade", "Cidade", "Niteroi")
+rua = InputBox("Digite sua rua", "Rua", "Rua 15 de Novembro")
+cep = InputBox("Digite seu cep", "CEP", "90000000")
+bairro = InputBox("Digite seu bairro", "Bairro", "Três Figueiras")
+
+
+    For i = 5 To ultimalinha
+        If Planilha1.Cells(i, 1) = "Nome:" Then
+            Planilha1.Cells(i, 2) = nome
+        End If
+        
+        If Planilha1.Cells(i, 1) = "Nascimento:" Then
+            Planilha1.Cells(i, 2) = data
+        End If
+        
+        If Planilha1.Cells(i, 1) = "CPF:" Then
+            Planilha1.Cells(i, 2) = op
+        End If
+        
+        If Planilha1.Cells(i, 1) = "Nome do pai:" Then
+            Planilha1.Cells(i, 2) = pai
+        End If
+        
+        If Planilha1.Cells(i, 1) = "Nome do mãe:" Then
+            Planilha1.Cells(i, 2) = mae
+        End If
+        
+        If Planilha1.Cells(i, 1) = "Estado:" Then
+            Planilha1.Cells(i, 2) = estado
+        End If
+        
+        If Planilha1.Cells(i, 1) = "Cidade:" Then
+            Planilha1.Cells(i, 2) = cidade
+        End If
+        
+        If Planilha1.Cells(i, 1) = "Rua:" Then
+            Planilha1.Cells(i, 2) = rua
+        End If
+        
+        If Planilha1.Cells(i, 1) = "Cep:" Then
+            Planilha1.Cells(i, 2) = cep
+        End If
+        
+        If Planilha1.Cells(i, 1) = "Bairro:" Then
+            Planilha1.Cells(i, 2) = bairro
+        End If
+        
+    Next
+End Sub
