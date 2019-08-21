@@ -1,0 +1,14 @@
+Private Sub CommandButton1_Click()
+Dim altura As Double, peso As Integer
+Dim imc As Double
+
+altura = InputBox("Informe sua altura", "Altura", "1,8")
+massa = InputBox("Informe seu peso", "Peso", "70")
+
+imc = massa / altura ^ 2
+
+MsgBox imc
+
+
+
+End Sub
