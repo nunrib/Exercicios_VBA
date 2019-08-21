@@ -1,0 +1,12 @@
+Sub diretorio()
+Dim matriz(3, 1) As String
+matriz(1, 1) = InputBox("Digite um nome")
+matriz(2, 1) = InputBox("digite um nome")
+matriz(3, 1) = InputBox("digite um nome")
+
+
+For i = 1 To 3
+MsgBox (matriz(i, 1))
+
+Next
+End Sub
